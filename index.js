@@ -9,8 +9,8 @@ app.use(
     extended: true,
   })
 );
-app.get("/:string", (req, res) => {
-  const string = req.params.string;
+app.post("/", (req, res) => {
+  const string = req.body.string;
   const userAgent = getUserAgent(string);
   //   res.json(userAgent);
   res.send(userAgent);
