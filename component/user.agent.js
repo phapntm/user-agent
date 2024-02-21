@@ -12,6 +12,6 @@ function getSeed(string) {
  */
 function getUserAgent(string) {
   const seed = getSeed(string);
-  return UserAgents[Math.round(seed * (UserAgents.length - 1))].userAgent;
+  return UserAgents[Math.round(seed * (UserAgents.length - 1))];
 }
 module.exports = getUserAgent;
